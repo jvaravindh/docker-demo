@@ -2,12 +2,14 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: ubuntu-latest
 
 steps:
 
 - task: Docker@2
   inputs:
-    command: 'build'
+    containerRegistry: 'dockerhub-connection'
+    repository: 'jvaravindh/docker-demo'
+    command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: 'latest'
