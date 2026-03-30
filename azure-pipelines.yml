@@ -9,7 +9,7 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'dockerhub-connection'
-    repository: 'jvaravindh/docker-demo'
+    repository: 'aravindhjv/docker-demo'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: 'latest'
